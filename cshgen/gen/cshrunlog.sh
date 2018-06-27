@@ -1,5 +1,5 @@
 #!/bin/bash
-#Start script without log
+#Start script with log
 #Form: 
 # cshrun <https port for unsigned cert> <http port>
 #Example
@@ -20,4 +20,10 @@ then
    export CLOUDHOST_SSL=$SSL
 fi
 echo set ssl $CLOUDHOST_SSL
-java -jar mrt-cloudhost-1.0.jar $PW $SSL $PORT
+
+#Set logname
+mkdir ../logs
+DATE=`date '+%Y-%m-%d'`
+logname="cloudhost-$DATE.log"
+
+java -jar mrt-cloudhost-1.0.jar $PW $SSL $PORT > ../logs/$logname 2>&1
