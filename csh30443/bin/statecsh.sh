@@ -1,9 +1,9 @@
 #!/bin/bash
-#Run state command to validate running Cloudhost
+# @(#) Run state command to validate running Cloudhost
 
-CMD="curl -ks -X GET https://localhost:30443/cloudhost/state/8100?t=xml"
+CMD="/usr/bin/curl -ks -X GET https://localhost:30443/cloudhost/state/8100?t=xml"
 #printf "\n\n***CMD: $CMD\n"
-state=`$CMD`
+state="$($CMD)"
 
 #Return shell message and status
 final_status=1

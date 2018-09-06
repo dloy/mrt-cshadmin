@@ -14,5 +14,6 @@ mv ../cloudhost/mrt-cloudhost-1.0.jar $out
 
 #Get deploy jar Jenkins
 echo Save:$out
-curl -s "http://builds.cdlib.org/view/Merritt/job/mrt-cloudhost-pub/ws/cloudhost-jetty/target/mrt-cloudhostjetty-1.0-SNAPSHOT.jar" >  ../cloudhost/mrt-cloudhost-1.0.jar
+curl -s "http://builds.cdlib.org/view/Merritt/job/mrt-jetty-cloudhost/ws/cloudhost-jetty/master/mrt-cloudhost-1.0.jar"  > ../cloudhost/mrt-cloudhost-1.0.jar
 ls -latd  ../cloudhost/mrt-cloudhost-1.0.jar
+
